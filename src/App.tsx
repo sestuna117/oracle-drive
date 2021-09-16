@@ -16,13 +16,13 @@ function App() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">Cards</Link>
+                <Link to="/cards">Cards</Link>
               </li>
               <li>
-                <Link to="/users">NPCs</Link>
+                <Link to="/npcs">NPCs</Link>
               </li>
               <li>
-                <Link to="/users">Packs</Link>
+                <Link to="/packs">Packs</Link>
               </li>
             </ul>
           </nav>
@@ -40,7 +40,7 @@ function App() {
               <div>Packs</div>
             </Route>
             <Route path="/">
-              <CardsPage />
+              <div>Home</div>
             </Route>
           </Switch>
         </div>

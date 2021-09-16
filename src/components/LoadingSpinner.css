@@ -1,0 +1,21 @@
+.loading-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50vh;
+    margin: auto;
+    background-color: #61dafb;
+    height: 100px;
+    width: 60px;
+    animation: spin1 1.5s infinite linear;
+}
+
+@keyframes spin1 {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateY(-360deg);
+    }
+}

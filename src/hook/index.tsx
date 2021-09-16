@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getCards, getNPCs, getPacks } from "../api/request.services";
 import {APIData, CardListCard, CardPack, NPCListNPC} from "../types";
 import {Nullable} from "../utils/nullable";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export const CardContext = React.createContext<Nullable<APIData<CardListCard>>>(undefined);
 export const NPCContext = React.createContext<Nullable<APIData<NPCListNPC>>>(undefined);
@@ -58,7 +59,7 @@ export default function ContextLoader({ children }: Props) {
     <CardContext.Provider value={cards}>
       <NPCContext.Provider value={npcs}>
         <PackContext.Provider value={packs}>
-          {isLoaded ? children : "Loading..."}
+          {isLoaded ? children : <LoadingSpinner />}
         </PackContext.Provider>
       </NPCContext.Provider>
     </CardContext.Provider>
