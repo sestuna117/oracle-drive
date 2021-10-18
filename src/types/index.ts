@@ -5,13 +5,15 @@ export type APIData<T> = {
 };
 
 export type CardListCard = Card & {
-  sources: {
-    npcs: Array<NPC>;
-    packs: Array<CardPack>;
-    drops: Array<string>;
-    purchase: number | null;
-  };
+  sources: CardSource
 };
+
+export type CardSource = {
+  npcs: Array<NPC>;
+  packs: Array<CardPack>;
+  drops: Array<string>;
+  purchase: number | null;
+}
 
 export type CardType = {
   id: number;
@@ -72,7 +74,7 @@ export type Card = {
   stars: number;
   stats: {
     numeric: { top: number; right: number; bottom: number; left: number };
-    formatted: { top: string; right: string; bottom: string; left: string };
+    formatted: { top: number | string; right: number | string; bottom: number | string; left: number | string };
   };
   type: CardType;
 };

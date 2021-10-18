@@ -1,0 +1,18 @@
+.card-stats {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-width: 60px;
+
+}
+
+.card-stats-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.1rem;
+}
+
+.card-stats-row:nth-child(2) {
+    justify-content: space-around;
+}

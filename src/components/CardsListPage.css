@@ -1,0 +1,26 @@
+.card-table {
+    width: 70%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.card-table tr th, .card-table tr td {
+    padding-right: 10px;
+}
+
+.card-table tr td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card-table tr {
+    border-bottom: 2px solid #cccccc;
+}
+
+.card-table tr .cell-align-left {
+    text-align: left;
+}
+
+.card-table tr:nth-child(even), .card-table thead tr {
+    background-color: #f3f3f3;
+}
