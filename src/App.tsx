@@ -14,20 +14,20 @@ function App() {
           <div>
             <NavBar />
             <Switch>
-              <Route path="/cards">
-                <CardsListPage />
-              </Route>
-              <Route path="/npcs">
-                <div>NPCs</div>
-              </Route>
-              <Route path="/packs">
-                <div>Packs</div>
-              </Route>
-              <Route path="/">
+              <Route exact path="/">
                 <div>Home</div>
               </Route>
-              <Route path="/cards/:id">
+              <Route exact path="/cards">
+                <CardsListPage />
+              </Route>
+              <Route exact path="/cards/:id">
                 <CardPage />
+              </Route>
+              <Route exact path="/npcs">
+                <div>NPCs</div>
+              </Route>
+              <Route exact path="/packs">
+                <div>Packs</div>
               </Route>
             </Switch>
           </div>

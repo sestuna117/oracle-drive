@@ -34,7 +34,7 @@ export default function CardsListPage() {
             <tr className="card-table-row" key={card.id}>
               <td>{card.id}</td>
               <td>
-                <Link to={"/cards/" + card.id}>
+                <Link to={`/cards/${card.id}`}>
                   <img src={card.icon} alt={card.name + "_icon"} />
                 </Link>
               </td>
