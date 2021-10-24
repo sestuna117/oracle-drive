@@ -1,17 +1,14 @@
-import React, { useContext } from "react";
-import { CardContext } from "../hook";
+import React from "react";
+import { useAppSelector } from "../hook";
 import "./CardsListPage.css";
 import CardRarity from "./card-components/CardRarity";
 import CardStats from "./card-components/CardStats";
 import CardSources from "./card-components/CardSources";
 import { Link } from "react-router-dom";
+import { getAllCards } from "../store/slices/cardsSlice";
 
 export default function CardsListPage() {
-  const cardsData = useContext(CardContext);
-
-  if (cardsData) {
-    console.log(cardsData.results);
-  }
+  const cardsData = useAppSelector(getAllCards);
 
   return cardsData ? (
     <div className="card-list">
@@ -30,7 +27,7 @@ export default function CardsListPage() {
           </tr>
         </thead>
         <tbody>
-          {cardsData.results.map((card) => (
+          {cardsData.map((card) => (
             <tr className="card-table-row" key={card.id}>
               <td>{card.id}</td>
               <td>
