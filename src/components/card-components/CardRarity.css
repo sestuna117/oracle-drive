@@ -1,0 +1,21 @@
+/*.card-rarity {*/
+/*    display: flex;*/
+/*    justify-content: left;*/
+/*    align-items: center;*/
+/*    margin: auto;*/
+/*    width: 80%;*/
+/*}*/
+
+.card-rarity-row {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-rarity-star {
+    min-height: 16px;
+    min-width: 16px;
+    margin-right: 2px;
+}
