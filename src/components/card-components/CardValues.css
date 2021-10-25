@@ -1,4 +1,4 @@
-.card-stats {
+.card-values {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -6,13 +6,13 @@
 
 }
 
-.card-stats-row {
+.card-values-row {
     display: flex;
     justify-content: center;
     align-items: center;
     line-height: 1.1rem;
 }
 
-.card-stats-row:nth-child(2) {
+.card-values-row:nth-child(2) {
     justify-content: space-around;
 }

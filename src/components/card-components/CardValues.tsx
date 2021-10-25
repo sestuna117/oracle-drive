@@ -1,7 +1,7 @@
 import React from "react";
-import "./CardStats.css";
+import "./CardValues.css";
 
-export default function CardStats(props: {
+export default function CardValues(props: {
   stats: {
     numeric: { top: number; right: number; bottom: number; left: number };
     formatted: {
@@ -14,15 +14,15 @@ export default function CardStats(props: {
 }) {
   const { stats } = props;
   return (
-    <div className="card-stats">
-      <div className="card-stats-row">
+    <div className="card-values">
+      <div className="card-values-row">
         <span>{stats.formatted.top}</span>
       </div>
-      <div className="card-stats-row">
+      <div className="card-values-row">
         <span>{stats.formatted.left}</span>
         <span>{stats.formatted.right}</span>
       </div>
-      <div className="card-stats-row">
+      <div className="card-values-row">
         <span>{stats.formatted.bottom}</span>
       </div>
     </div>

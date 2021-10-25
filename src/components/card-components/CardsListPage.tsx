@@ -1,11 +1,11 @@
 import React from "react";
-import { useAppSelector } from "../hook";
+import { useAppSelector } from "../../hook";
 import "./CardsListPage.css";
-import CardRarity from "./card-components/CardRarity";
-import CardStats from "./card-components/CardStats";
-import CardSources from "./card-components/CardSources";
+import CardRarity from "./CardRarity";
+import CardValues from "./CardValues";
+import CardsListSources from "./CardsListSources";
 import { Link } from "react-router-dom";
-import { getAllCards } from "../store/slices/cardsSlice";
+import { getAllCards } from "../../store/slices/cardsSlice";
 
 export default function CardsListPage() {
   const cardsData = useAppSelector(getAllCards);
@@ -47,10 +47,10 @@ export default function CardsListPage() {
                 <CardRarity rarity={card.stars} />
               </td>
               <td>
-                <CardStats stats={card.stats} />
+                <CardValues stats={card.stats} />
               </td>
               <td className="cell-align-left">
-                <CardSources sources={card.sources} />
+                <CardsListSources sources={card.sources} />
               </td>
               <td>
                 <span>{card.owned}</span>

@@ -3,7 +3,7 @@ import { CardListCard } from "../../types";
 import { RootState } from "../index";
 
 export interface CardsState {
-  value: Array<CardListCard> | null;
+  value: Array<CardListCard> | null | undefined;
 }
 
 const initialState: CardsState = {
@@ -24,12 +24,12 @@ export const cardsSlice = createSlice({
 export const { updateCards } = cardsSlice.actions;
 
 export const getAllCards = (state: RootState) => state.cards.value;
-export const getCard = (id: number) => (state: RootState) => {
-  if (!state.cards.value) {
+export const getCard = (id: string | undefined) => (state: RootState) => {
+  if (!state.cards.value || !id) {
     return;
   }
   return state.cards.value.find((card) => {
-    return (card.id = id);
+    return card.id === parseInt(id);
   });
 };
 

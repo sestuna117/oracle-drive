@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import { useAppDispatch, useAppSelector } from "./hook";
-import CardsListPage from "./components/CardsListPage";
+import CardsListPage from "./components/card-components/CardsListPage";
 import NavBar from "./components/NavBar";
-import CardPage from "./components/card-page/CardPage";
+import CardPage from "./components/card-components/card-page/CardPage";
 import {
   getLoading,
   setIsLoading,
