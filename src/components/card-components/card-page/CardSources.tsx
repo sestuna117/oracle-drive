@@ -7,7 +7,7 @@ export default function CardSources(props: { sources: CardSource }) {
   return (
     <div className="card-source">
       <div className="card-source-prompt">Obtained From</div>
-      <div className="card-source-block">
+      <div className="card-source-blocks">
         {sources.npcs.map((npc) => (
           <div key={npc.id}>
             {npc.name +
@@ -25,6 +25,7 @@ export default function CardSources(props: { sources: CardSource }) {
         {sources.drops.map((drop) => (
           <div key={drop}>{drop}</div>
         ))}
+        {sources.purchase ? <div>{sources.purchase} MGP</div> : null}
       </div>
     </div>
   );

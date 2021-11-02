@@ -23,7 +23,7 @@ export default function CardHeader(props: { cardData: Card }) {
               <CardRarity rarity={cardData.stars} />
             </div>
             <div>
-              <span>Card Rarity: {cardData.type.name}</span>
+              <span>Card Type: {cardData.type.name}</span>
             </div>
           </div>
         </div>

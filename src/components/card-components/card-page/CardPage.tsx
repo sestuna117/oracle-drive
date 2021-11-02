@@ -15,8 +15,10 @@ export default function CardPage() {
   return cardData ? (
     <div className="content">
       <div className="card-id-patch">
-        <span>ID No.{cardData.id}</span>
-        <span>Available Since: {cardData.patch}</span>
+        <span>ID {cardData.number}</span>
+        <span style={{ color: "#808080" }}>
+          Available Since: {cardData.patch}
+        </span>
       </div>
       <div className="content-top-bar" />
       <CardHeader cardData={cardData} />
@@ -25,6 +27,10 @@ export default function CardPage() {
       <CardPrices sources={cardData.sources} sell_price={cardData.sell_price} />
       <div className="content-divider" />
       <CardSources sources={cardData.sources} />
+      <div className="content-divider" />
+      <div className="card-percent-owned">
+        Percentage Owned: {cardData.owned}
+      </div>
     </div>
   ) : null;
 }

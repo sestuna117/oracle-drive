@@ -66,6 +66,7 @@ export type Card = {
   image: string;
   link: string;
   name: string;
+  number: string;
   order: number;
   order_group: number;
   owned: string;
