@@ -25,4 +25,13 @@ export const { updateNPCs } = npcsSlice.actions;
 
 export const getAllNPCs = (state: RootState) => state.npcs.value;
 
+export const getNPC = (id: string | undefined) => (state: RootState) => {
+  if (!state.npcs.value || !id) {
+    return;
+  }
+  return state.npcs.value.find((card) => {
+    return card.id === parseInt(id);
+  });
+};
+
 export default npcsSlice.reducer;

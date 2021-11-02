@@ -1,6 +1,5 @@
 import React from "react";
 import { CardSource } from "../../types";
-import "./CardsListSource.css";
 
 export default function CardsListSources(props: { sources: CardSource }) {
   const { sources } = props;

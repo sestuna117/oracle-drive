@@ -15,6 +15,8 @@ import { updateCards } from "./store/slices/cardsSlice";
 import { updateNPCs } from "./store/slices/npcsSlice";
 import { updatePacks } from "./store/slices/packsSlice";
 import LoadingSpinner from "./components/LoadingSpinner";
+import NpcsListPage from "./components/npc-components/NpcsListPage";
+import NpcPage from "./components/npc-components/npc-page/NpcPage";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -75,7 +77,10 @@ function App() {
               <CardPage />
             </Route>
             <Route exact path="/npcs">
-              <div>NPCs</div>
+              <NpcsListPage />
+            </Route>
+            <Route exact path="/npcs/:id">
+              <NpcPage />
             </Route>
             <Route exact path="/packs">
               <div>Packs</div>

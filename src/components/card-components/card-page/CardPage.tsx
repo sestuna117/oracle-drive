@@ -3,6 +3,7 @@ import { useAppSelector } from "../../../hook";
 import { getCard } from "../../../store/slices/cardsSlice";
 import { useParams } from "react-router-dom";
 import "./CardPage.css";
+import "../../Page.css"
 import CardSources from "./CardSources";
 import CardPrices from "./CardPrices";
 import CardHeader from "./CardHeader";
@@ -14,7 +15,7 @@ export default function CardPage() {
 
   return cardData ? (
     <div className="content">
-      <div className="card-id-patch">
+      <div className="content-id-patch">
         <span>ID {cardData.number}</span>
         <span style={{ color: "#808080" }}>
           Available Since: {cardData.patch}

@@ -13,10 +13,11 @@ export default function CardSources(props: { sources: CardSource }) {
             {npc.name +
               " - " +
               npc.location.name +
-              " X: " +
+              " (X: " +
               npc.location.x +
-              " Y: " +
-              npc.location.y}
+              ", Y: " +
+              npc.location.y +
+              ")"}
           </div>
         ))}
         {sources.packs.map((pack) => (

@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppSelector } from "../../hook";
-import "./CardsListPage.css";
+import "../ListPage.css";
 import CardRarity from "./CardRarity";
 import CardValues from "./CardValues";
 import CardsListSources from "./CardsListSources";
@@ -12,7 +12,7 @@ export default function CardsListPage() {
 
   return cardsData ? (
     <div className="card-list">
-      <table className="card-table">
+      <table className="table">
         <thead>
           <tr>
             <th>Id</th>
@@ -36,7 +36,9 @@ export default function CardsListPage() {
                 </Link>
               </td>
               <td className="cell-align-left">
-                <span>{card.name}</span>
+                <Link className='table-item-name' to={`/cards/${card.id}`}>
+                  <span>{card.name}</span>
+                </Link>
               </td>
               <td>
                 {card.type.image ? (
