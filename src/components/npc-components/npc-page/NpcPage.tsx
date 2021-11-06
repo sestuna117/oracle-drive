@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import { useAppSelector } from "../../../hook";
 import { getNPC } from "../../../store/slices/npcsSlice";
 import "../../Page.css";
+import NpcRewardsTable from "./NpcRewardsTable";
+import "./NpcPage.css";
+import NpcQuest from "./NpcQuest";
 
 export default function NpcPage() {
   const { id } = useParams<{ id?: string }>();
@@ -18,10 +21,16 @@ export default function NpcPage() {
         </span>
       </div>
       <div className="content-top-bar" />
-        <div className='npc-name'>{npcData.name}</div>
+      <div className="npc-name">{npcData.name}</div>
+      <div>rules</div>
       <div className="content-divider" />
+      <div>location</div>
+      <NpcRewardsTable cards={npcData.rewards} />
+      {npcData.quest ? <NpcQuest quest={npcData.quest} /> : null}
       <div className="content-divider" />
+      <div>fixed cards</div>
       <div className="content-divider" />
+      <div>variable cards</div>
     </div>
   ) : null;
 }

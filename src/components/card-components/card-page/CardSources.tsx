@@ -1,5 +1,6 @@
 import React from "react";
 import { CardSource } from "../../../types";
+import { Link } from "react-router-dom";
 
 export default function CardSources(props: { sources: CardSource }) {
   const { sources } = props;
@@ -10,8 +11,10 @@ export default function CardSources(props: { sources: CardSource }) {
       <div className="card-source-blocks">
         {sources.npcs.map((npc) => (
           <div key={npc.id}>
-            {npc.name +
-              " - " +
+            <Link className="card-source-npc" to={`/npcs/${npc.id}`}>
+              {npc.name}
+            </Link>
+            {" - " +
               npc.location.name +
               " (X: " +
               npc.location.x +

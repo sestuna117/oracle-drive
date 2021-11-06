@@ -6,7 +6,6 @@
 
 .card-header {
     display: flex;
-    width: 95%;
     margin-bottom: 15px;
 }
 
@@ -46,14 +45,6 @@
     font-weight: bold;
 }
 
-.card-body {
-    width: 95%;
-}
-
-.card-source {
-    width: 95%;
-}
-
 .card-source-prompt, .card-source-blocks {
     background-color: #2b2b2b;
     padding: 5px;
@@ -70,8 +61,12 @@
     box-shadow: inset 0 1px 4px -3px white;
 }
 
+.card-source-npc {
+    text-decoration: none;
+    color: #73bfe6;
+}
+
 .card-market {
-    width: 95%;
     display: flex;
     justify-content: left;
     flex-direction: column;
@@ -79,7 +74,6 @@
 
 .card-percent-owned {
     margin-top: 5px;
-    width: 95%;
     display: flex;
     justify-content: right;
     color: #808080
@@ -89,6 +83,6 @@
     color: #bbac94;
 }
 
-.card-desc {
+.card-desc, .card-percent-owned, .card-market, .card-header, .card-body, .card-source {
     width: 95%;
 }
