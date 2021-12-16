@@ -6,6 +6,7 @@ import "../../Page.css";
 import NpcRewardsTable from "./NpcRewardsTable";
 import "./NpcPage.css";
 import NpcQuest from "./NpcQuest";
+import NpcLocation from "./NpcLocation";
 
 export default function NpcPage() {
   const { id } = useParams<{ id?: string }>();
@@ -24,7 +25,7 @@ export default function NpcPage() {
       <div className="npc-name">{npcData.name}</div>
       <div>rules</div>
       <div className="content-divider" />
-      <div>location</div>
+      <NpcLocation location={npcData.location} />
       <NpcRewardsTable cards={npcData.rewards} />
       {npcData.quest ? <NpcQuest quest={npcData.quest} /> : null}
       <div className="content-divider" />
