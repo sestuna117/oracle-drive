@@ -55,7 +55,9 @@ export type CardNPCQuest = {
 };
 
 export type NPCListNPC = NPC & {
+  fixed_cards: Array<Card>;
   rewards: Array<Card>;
+  variable_cards: Array<Card>;
 };
 
 export type Card = {

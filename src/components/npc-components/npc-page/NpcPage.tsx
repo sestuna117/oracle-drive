@@ -7,6 +7,7 @@ import NpcRewardsTable from "./NpcRewardsTable";
 import "./NpcPage.css";
 import NpcQuest from "./NpcQuest";
 import NpcLocation from "./NpcLocation";
+import NpcDeck from "./NpcDeck";
 
 export default function NpcPage() {
   const { id } = useParams<{ id?: string }>();
@@ -28,10 +29,7 @@ export default function NpcPage() {
       <NpcLocation location={npcData.location} />
       <NpcRewardsTable cards={npcData.rewards} />
       {npcData.quest ? <NpcQuest quest={npcData.quest} /> : null}
-      <div className="content-divider" />
-      <div>fixed cards</div>
-      <div className="content-divider" />
-      <div>variable cards</div>
+      <NpcDeck fixed_cards={npcData.fixed_cards} variable_cards={npcData.variable_cards} />
     </div>
   ) : null;
 }

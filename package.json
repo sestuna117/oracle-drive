@@ -1,6 +1,6 @@
 {
   "name": "oracle-drive",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",

@@ -12,7 +12,7 @@ export async function getCards() {
 
 export async function getNPCs() {
     try {
-        let res = await axiosConfig.get('npcs')
+        let res = await axiosConfig.get('npcs?deck=1')
         console.log(res);
         return res.data;
     } catch (error) {

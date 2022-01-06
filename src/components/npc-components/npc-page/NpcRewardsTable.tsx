@@ -17,7 +17,7 @@ export default function NpcRewardsTable(props: { cards: Array<Card> }) {
         </thead>
         <tbody>
           {cards.map((card) => (
-            <tr>
+            <tr key={card.id}>
               <td className="npc-rewards-icon">
                 <Link
                   className="card-link"
