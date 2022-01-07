@@ -24,6 +24,7 @@ export const cardsSlice = createSlice({
 export const { updateCards } = cardsSlice.actions;
 
 export const getAllCards = (state: RootState) => state.cards.value;
+
 export const getCard = (id: string | undefined) => (state: RootState) => {
   if (!state.cards.value || !id) {
     return;

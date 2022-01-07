@@ -1,0 +1,9 @@
+.npc-rewards-list {
+    display: flex;
+    align-items: center;
+}
+
+.card-link {
+    display: flex;
+    margin-right: 3px;
+}

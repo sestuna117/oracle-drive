@@ -13,8 +13,8 @@ export default function CardPrices(props: {
         <span>{sources.purchase ? sources.purchase + " MGP" : "No"}</span>
       </div>
       <div>
-        <span className="card-market-prompt">Sells for: </span>
-        <span>{sell_price ? sell_price + " gil" : "Unsellable"}</span>
+        <span className="card-market-prompt">Sells for </span>
+        <span>{sell_price ? sell_price + " MGP" : "Unsellable"}</span>
       </div>
     </div>
   );

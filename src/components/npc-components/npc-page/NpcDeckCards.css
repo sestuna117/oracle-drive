@@ -1,0 +1,19 @@
+.npc-deck-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.npc-cards-title {
+    width: 100%;
+    display: block;
+    background-color: #1b1b1b;
+    color: #cccccc;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.npc-cards-title span {
+    padding: 5px;
+}

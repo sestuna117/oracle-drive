@@ -1,0 +1,41 @@
+.npc-rewards-table {
+    margin: 5px;
+    background-color: #333333;
+    border: 1px solid #3c3c3c;
+    border-collapse: collapse;
+    width: 95%;
+    outline: 1px solid #1b1b1b;
+}
+
+.npc-rewards-table thead {
+    background-color: #1b1b1b;
+    text-align: left;
+}
+
+.npc-rewards-table thead th {
+    padding: 5px;
+    color: #cccccc;
+}
+
+.npc-rewards-table tr {
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.npc-rewards-table tbody tr:nth-child(odd) {
+    background-color: #2e2e2e;
+}
+
+.npc-rewards-table tbody td:first-child {
+    width: 60px;
+}
+
+.npc-rewards-link {
+    text-decoration: none;
+    color: #73bfe6;
+    font-weight: bold;
+}
+
+.npc-rewards-table .card-link {
+    margin: 5px 5px 5px 8px;
+    display: flex;
+}
