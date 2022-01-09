@@ -7,7 +7,6 @@ export default function NpcDeckCards(props: {
   cards: Array<Card>;
 }) {
   const { title, cards } = props;
-  console.log(cards);
 
   return (
     <div className="npc-rewards-table">
@@ -16,10 +15,11 @@ export default function NpcDeckCards(props: {
       </div>
       <div className="npc-deck-cards">
         {cards.map((card) => (
-          <div key={card.id}>
+          <div className="npc-deck-card" key={card.id}>
             <Link className="card-link" to={`/cards/${card.id}`} key={card.id}>
               <img src={card.image} alt={card.name} />
             </Link>
+            <div className="tooltip-text">{card.name}</div>
           </div>
         ))}
       </div>
