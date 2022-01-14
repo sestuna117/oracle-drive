@@ -8,6 +8,8 @@ import "./NpcPage.css";
 import NpcQuest from "./NpcQuest";
 import NpcLocation from "./NpcLocation";
 import NpcDeck from "./NpcDeck";
+import NpcHeader from "./NpcHeader";
+import NpcRules from "./NpcRules";
 
 export default function NpcPage() {
   const { id } = useParams<{ id?: string }>();
@@ -23,13 +25,17 @@ export default function NpcPage() {
         </span>
       </div>
       <div className="content-top-bar" />
-      <div className="npc-name">{npcData.name}</div>
-      <div>rules</div>
+      <NpcHeader npcData={npcData} />
+      <div className="content-divider" />
+      <NpcRules rules={npcData.rules} />
       <div className="content-divider" />
       <NpcLocation location={npcData.location} />
       <NpcRewardsTable cards={npcData.rewards} />
       {npcData.quest ? <NpcQuest quest={npcData.quest} /> : null}
-      <NpcDeck fixed_cards={npcData.fixed_cards} variable_cards={npcData.variable_cards} />
+      <NpcDeck
+        fixed_cards={npcData.fixed_cards}
+        variable_cards={npcData.variable_cards}
+      />
     </div>
   ) : null;
 }

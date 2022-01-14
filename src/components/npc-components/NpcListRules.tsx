@@ -1,7 +1,7 @@
 import React from "react";
-import "./NpcRules.css";
+import "./NpcListRules.css";
 
-export default function NpcRules(props: { rules: Array<string> }) {
+export default function NpcListRules(props: { rules: Array<string> }) {
   const { rules } = props;
 
   return (

@@ -3,7 +3,7 @@ import { useAppSelector } from "../../hook";
 import { getAllNPCs } from "../../store/slices/npcsSlice";
 import { Link } from "react-router-dom";
 import NpcRewards from "./NpcRewards";
-import NpcRules from "./NpcRules";
+import NpcListRules from "./NpcListRules";
 
 export default function NpcsListPage() {
   const npcsData = useAppSelector(getAllNPCs);
@@ -43,7 +43,7 @@ export default function NpcsListPage() {
                 <NpcRewards cards={npc.rewards} />
               </td>
               <td>
-                <NpcRules rules={npc.rules} />
+                <NpcListRules rules={npc.rules} />
               </td>
               <td>{npc.patch}</td>
             </tr>
