@@ -7,7 +7,6 @@ import NpcListRules from "./NpcListRules";
 
 export default function NpcsListPage() {
   const npcsData = useAppSelector(getAllNPCs);
-  console.log(npcsData);
 
   return npcsData ? (
     <div className="npc-list">

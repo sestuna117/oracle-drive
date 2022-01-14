@@ -17,6 +17,7 @@ import { updatePacks } from "./store/slices/packsSlice";
 import LoadingSpinner from "./components/LoadingSpinner";
 import NpcsListPage from "./components/npc-components/NpcsListPage";
 import NpcPage from "./components/npc-components/npc-page/NpcPage";
+import CardPacksPage from "./components/packs-components/CardPacksPage";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -83,7 +84,7 @@ function App() {
               <NpcPage />
             </Route>
             <Route exact path="/packs">
-              <div>Packs</div>
+              <CardPacksPage />
             </Route>
           </Switch>
         </div>
