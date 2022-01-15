@@ -1,0 +1,25 @@
+.packs-list {
+    margin: auto;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card-pack {
+    width: 45%;
+}
+
+.pack-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-button {
+    border: none;
+    background-color: transparent;
+}
+
+.dropdown-button:hover {
+    cursor: pointer;
+}
