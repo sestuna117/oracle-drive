@@ -7,10 +7,16 @@
 }
 
 .card-pack {
-    width: 45%;
+    color: #e5e5e5;
+    background-color: #1b1b1b;
+    width: 85%;
+    border-radius: 5px;
+    margin: 5px 0;
 }
 
 .pack-header {
+    padding: 5px;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
 }
@@ -18,8 +24,46 @@
 .dropdown-button {
     border: none;
     background-color: transparent;
+    color: #e5e5e5;
 }
 
-.dropdown-button:hover {
+.pack-header:hover, .dropdown-button:hover {
     cursor: pointer;
+}
+
+.card-pack-table {
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.card-pack-table, .card-pack-table td, .card-pack-table th {
+    border: 1px solid #3c3c3c;
+}
+
+.card-pack-table td {
+    background-color: #2e2e2e;
+}
+
+.card-pack-card-name {
+    color: #73bfe6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-pack-cell {
+    text-align: center;
+}
+
+.card-pack-header {
+    width: 100px;
+}
+
+.card-pack-header-rarity {
+    width: 200px;
+}
+
+.card-pack-table .card-rarity .card-rarity-row {
+    display: unset;
 }
