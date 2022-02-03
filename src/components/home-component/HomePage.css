@@ -1,0 +1,22 @@
+.welcome-header {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.welcome-message, .welcome-summary, .welcome-footer {
+    width: 85%;
+    font-size: 15px;
+}
+
+.welcome-message {
+    text-align: left;
+}
+
+.welcome-footer, .welcome-summary {
+    text-align: center;
+}
+
+.welcome-summary {
+    margin: 10px;
+}

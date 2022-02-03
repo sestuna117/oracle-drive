@@ -18,6 +18,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import NpcsListPage from "./components/npc-components/NpcsListPage";
 import NpcPage from "./components/npc-components/npc-page/NpcPage";
 import CardPacksPage from "./components/packs-components/CardPacksPage";
+import HomePage from "./components/home-component/HomePage";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -69,7 +70,7 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/">
-              <div>Home</div>
+              <HomePage />
             </Route>
             <Route exact path="/cards">
               <CardsListPage />

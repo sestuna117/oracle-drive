@@ -33,8 +33,8 @@
 
 .card-pack-table {
     width: 95%;
-    margin: auto;
     border-collapse: collapse;
+    margin: auto auto 15px;
 }
 
 .card-pack-table, .card-pack-table td, .card-pack-table th {
